@@ -1,0 +1,35 @@
+---
+- name: Install RHEL performance monitoring - with Grafana Web UI on the grafana host
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    # Archiving configuration
+    # Interval is in seconds
+    pcp_pmlogger_interval: 60
+    metrics_retention_days: 7
+
+    # Remote access authentication configuration, optional
+    # https://pcp.readthedocs.io/en/latest/QG/AuthenticatedConnections.html
+    # Set to empty string to disable auth
+    metrics_username: metrics
+    # This should come from vault
+    metrics_password: metrics
+
+    # Enable to open firewall for PMCD remote access
+    metrics_manage_firewall: true
+
+  roles:
+    # Configure PCP on all hosts
+    - name: redhat.rhel_system_roles.metrics
+    # Configure Grafana Web UI
+    - name: redhat.rhel_system_roles.metrics
+      when: inventory_hostname in groups.grafana
+      vars:
+        # List of hosts to monitor
+        metrics_monitored_hosts: "{{ groups.monitor }}"
+        # PMWEBAPI REST API - port 44322
+        metrics_query_service: true
+        # Grafana Web UI - HTTP @ port 3000
+        # Default credentials: admin/admin
+        metrics_graph_service: true

@@ -1,0 +1,7 @@
+[grafana]
+rhel1.example.com
+
+[monitor]
+rhel1.example.com
+rhel2.example.com
+rhel3.example.com

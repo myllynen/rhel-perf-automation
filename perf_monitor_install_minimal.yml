@@ -1,0 +1,32 @@
+---
+- name: Install RHEL performance monitoring - minimal setup without Grafana Web UI
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    # Archiving configuration
+    # Interval is in seconds
+    pcp_pmlogger_interval: 60
+    metrics_retention_days: 7
+
+    # Remote access authentication configuration, optional
+    # https://pcp.readthedocs.io/en/latest/QG/AuthenticatedConnections.html
+    # Set to empty string to disable auth
+    metrics_username: metrics
+    # This should come from vault
+    metrics_password: metrics
+
+    # Enable to open firewall for PMCD remote access
+    metrics_manage_firewall: true
+
+    # Whether PMCD should allow remote access
+    # Can be disabled only in a minimal setup
+    # A simple example for command line use:
+    # $ pmrep -h test.example.com -p -B MB :vmstat
+    # 0 - permit remote connections on each host
+    # 1 - reject remote connections on each host
+    pcp_pmcd_localonly: 0
+
+  roles:
+    # Configure PCP on all hosts
+    - name: redhat.rhel_system_roles.metrics
