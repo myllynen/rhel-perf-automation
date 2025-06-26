@@ -10,7 +10,7 @@ Ansible playbooks for RHEL performance monitoring automation.
   * Example inventory
 * [perf_monitor_install_minimal.yml](perf_monitor_install_minimal.yml)
   * Playbook to install minimal setup without central monitoring
- [perf_monitor_install_monitor.yml](perf_monitor_install_monitor.yml)
+* [perf_monitor_install_monitor.yml](perf_monitor_install_monitor.yml)
   * Playbook to install setup with central monitoring configured
 
 Depending on the environment and requirements separate playbooks and/or
