@@ -82,6 +82,11 @@ host in the Ansible grafana group:
 ssh -L 127.0.0.1:3000:localhost:3000 rhel1.example.com
 ```
 
+After the setup is complete, see
+[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/monitoring_and_managing_system_status_and_performance/monitoring-performance-with-performance-co-pilot](RHEL PCP guide)
+and also its section on
+[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/monitoring_and_managing_system_status_and_performance/setting-up-graphical-representation-of-pcp-metrics#accessing-the-grafana-web-ui](aceesing the Grafana Web UI).
+
 ## See Also
 
 See also
@@ -95,6 +100,9 @@ See also
 
 See also
 [https://myllynen.github.io/rhel-performance-guide/](https://myllynen.github.io/rhel-performance-guide/).
+
+See also
+[https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/monitoring_and_managing_system_status_and_performance/monitoring-performance-with-performance-co-pilot](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/monitoring_and_managing_system_status_and_performance/monitoring-performance-with-performance-co-pilot).
 
 ## License
 
