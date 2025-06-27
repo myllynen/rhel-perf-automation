@@ -2,7 +2,7 @@
 - name: Install RHEL performance monitoring - minimal setup without Grafana Web UI
   hosts: all
   become: true
-  gather_facts: false
+  gather_facts: true
   vars:
     # Archiving configuration
     # Interval is in seconds
