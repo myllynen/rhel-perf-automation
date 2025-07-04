@@ -107,6 +107,9 @@ See also
 [https://myllynen.github.io/rhel-performance-guide/](https://myllynen.github.io/rhel-performance-guide/).
 
 See also
+[https://www.redhat.com/en/blog/automate-performance-metrics-collection-and-visualization-rhel-system-roles](https://www.redhat.com/en/blog/automate-performance-metrics-collection-and-visualization-rhel-system-roles).
+
+See also
 [https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/monitoring_and_managing_system_status_and_performance/monitoring-performance-with-performance-co-pilot](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/monitoring_and_managing_system_status_and_performance/monitoring-performance-with-performance-co-pilot).
 
 ## License
