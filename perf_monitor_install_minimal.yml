@@ -29,4 +29,4 @@
 
   roles:
     # Configure PCP on all hosts
-    - name: redhat.rhel_system_roles.metrics
+    - role: redhat.rhel_system_roles.metrics

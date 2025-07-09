@@ -21,9 +21,9 @@
 
   roles:
     # Configure PCP on all hosts
-    - name: redhat.rhel_system_roles.metrics
+    - role: redhat.rhel_system_roles.metrics
     # Configure Grafana Web UI
-    - name: redhat.rhel_system_roles.metrics
+    - role: redhat.rhel_system_roles.metrics
       when: inventory_hostname in groups.grafana
       vars:
         # List of hosts to monitor
