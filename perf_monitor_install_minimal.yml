@@ -19,6 +19,13 @@
     # Enable to open firewall for PMCD remote access
     metrics_manage_firewall: true
 
+    # Optional metric sources to install
+    # NB. Add tasks to enable the PMDAs
+    #metrics_optional_packages:
+    #  - pcp-pmda-amdgpu
+    #  - pcp-pmda-nvidia-gpu
+    #  - pcp-pmda-openmetrics
+
     # Whether PMCD should allow remote access
     # Can be disabled only in a minimal setup
     # A simple example for command line use:
